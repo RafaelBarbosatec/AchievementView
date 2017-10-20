@@ -100,6 +100,14 @@ public class AchievementView extends RelativeLayout {
         return this;
     }
 
+    public AchievementView setBorderRetangle(){
+
+        img_left.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.retangle_archiement));
+        view_end.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.retangle_archiement));
+
+        return this;
+    }
+
     public AchievementView setIcon(int drawable){
 
         img_left.setImageDrawable(context.getResources().getDrawable(drawable));
@@ -114,12 +122,12 @@ public class AchievementView extends RelativeLayout {
         return this;
     }
 
-    public AchievementView setTitulo(String titulo){
+    public AchievementView setTitle(String titulo){
         tv_titulo.setText(titulo);
         return this;
     }
 
-    public AchievementView setMensagem(String msg){
+    public AchievementView setMensage(String msg){
         tv_msg.setText(msg);
         return this;
     }

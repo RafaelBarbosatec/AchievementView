@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button bt;
-    private AchievementView achievementView;
+    private AchievementView achievementView, achievementView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +28,24 @@ public class MainActivity extends AppCompatActivity {
 
         achievementView = (AchievementView) findViewById(R.id.achievementView);
 
+        achievementView2 = (AchievementView) findViewById(R.id.achievementView2);
+
         bt = (Button) findViewById(R.id.bt);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                achievementView2
+                        .setTitle("Treino Finalizado")
+                        .setMensage("Você ganhou 50 pontos de força!")
+                        .setColor(R.color.colorAccent)
+                        .setIcon(R.drawable.ic_sun)
+                        .show();
+
                 achievementView
-                        .setTitulo("Treino Finalizado")
-                        .setMensagem("Você ganhou 30 pontos de força!")
+                        .setTitle("Treino Finalizado")
+                        .setMensage("Você ganhou 30 pontos de força!")
+                        .setBorderRetangle()
                         .setColor(R.color.colorPrimaryDark)
                         .setIcon(R.drawable.ic_news)
                         .show();

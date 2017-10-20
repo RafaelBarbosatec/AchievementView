@@ -13,11 +13,22 @@
 
     </com.rafaelbarbosatec.archivimentview.AchievementView>
 
+    <com.rafaelbarbosatec.archivimentview.AchievementView
+        android:id="@+id/achievementView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievementView">
+
+    </com.rafaelbarbosatec.archivimentview.AchievementView>
+
     <Button
         android:id="@+id/bt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="SHOW"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

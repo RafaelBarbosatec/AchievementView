@@ -17,3 +17,34 @@ and:
 dependencies {
     compile 'com.github.RafaelBarbosatec:AchievementView:0.1.0'
 }
+
+```
+
+Add in view
+
+```xml
+
+<com.rafaelbarbosatec.archivimentview.AchievementView
+        android:id="@+id/achievementView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+</com.rafaelbarbosatec.archivimentview.AchievementView>
+
+```
+
+Set configuration
+
+```java
+
+achievementView = (AchievementView) findViewById(R.id.achievementView);
+
+achievementView
+            .setTitle("Treino Finalizado")
+            .setMensage("Você ganhou 50 pontos de força!")
+            //.setBorderRetangle()
+            .setColor(R.color.colorAccent)
+            .setIcon(R.drawable.ic_sun)
+            .show();
+
+```

@@ -5,8 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/AchievementView.iml" filepath="$PROJECT_DIR$/AchievementView.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArchivimenteView.iml" filepath="$PROJECT_DIR$/ArchivimenteView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/archivimentview/archivimentview.iml" filepath="$PROJECT_DIR$/archivimentview/archivimentview.iml" />
       <module fileurl="file://$PROJECT_DIR$/archivimentview/archivimentview.iml" filepath="$PROJECT_DIR$/archivimentview/archivimentview.iml" />
     </modules>
   </component>

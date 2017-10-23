@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.CountDownTimer;
 import android.util.AttributeSet;
@@ -28,12 +29,11 @@ import android.widget.TextView;
 public class AchievementView extends RelativeLayout {
 
     private Context context;
-    private View view_end;
     private LayoutInflater inflater;
     private TextView tv_titulo, tv_msg;
     private ImageView img_left;
-    private RelativeLayout rl_ach;
-    private LinearLayout ll_content;
+    private RelativeLayout rl_ach ;
+    private LinearLayout ll_content,ll_content_main;
     private int width;
     private boolean constainWidth = false;
     private boolean show = false;
@@ -55,17 +55,17 @@ public class AchievementView extends RelativeLayout {
     private void initControl(Context context, AttributeSet attrs) {
         this.context = context;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.content_achievement, this);
+        inflater.inflate(R.layout.content_ach, this);
         assignUiElements();
     }
 
     private void assignUiElements() {
 
-        view_end = findViewById(R.id.view_end);
         img_left = (ImageView) findViewById(R.id.img_left);
         tv_titulo = (TextView) findViewById(R.id.tv_titulo);
         tv_msg = (TextView) findViewById(R.id.tv_msg);
         rl_ach = (RelativeLayout) findViewById(R.id.rl_ach);
+        ll_content_main = (LinearLayout) findViewById(R.id.ll_content_main);
         rl_ach.setAlpha(0f);
         ll_content = (LinearLayout) findViewById(R.id.ll_content);
 
@@ -87,23 +87,25 @@ public class AchievementView extends RelativeLayout {
 
     }
 
+    public AchievementView setClick(OnClickListener clickListern){
+        ll_content_main.setOnClickListener(clickListern);
+
+        return this;
+    }
+
     public AchievementView setColor(int color){
 
-        GradientDrawable bgIMG = (GradientDrawable)img_left.getBackground();
-        bgIMG.setColor(context.getResources().getColor(color));
-
-        GradientDrawable bgView = (GradientDrawable)view_end.getBackground();
+        GradientDrawable bgView = (GradientDrawable)ll_content_main.getBackground();
         bgView.setColor(context.getResources().getColor(color));
 
-        ll_content.setBackgroundColor(context.getResources().getColor(color));
+        //ll_content_main.setBackgroundColor(context.getResources().getColor(color));
 
         return this;
     }
 
     public AchievementView setBorderRetangle(){
 
-        img_left.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.retangle_archiement));
-        view_end.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.retangle_archiement));
+        ll_content_main.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.retangle_archiement));
 
         return this;
     }
@@ -122,13 +124,24 @@ public class AchievementView extends RelativeLayout {
         return this;
     }
 
+    /*public AchievementView setTypeface(Typeface typeface){
+
+        tv_titulo.setTypeface(typeface);
+        tv_msg.setTypeface(typeface);
+
+        return this;
+    }*/
     public AchievementView setTitle(String titulo){
+
         tv_titulo.setText(titulo);
+
         return this;
     }
 
     public AchievementView setMensage(String msg){
+
         tv_msg.setText(msg);
+
         return this;
     }
 
@@ -171,7 +184,7 @@ public class AchievementView extends RelativeLayout {
 
                     anim.setDuration(600);
                     anim.start();
-                    aplyAlpha(tv_titulo, 600, 0.6f, null);
+                    aplyAlpha(tv_titulo, 600, 0.7f, null);
                     aplyAlpha(tv_msg, 800, 1, new Animator.AnimatorListener() {
                         @Override
                         public void onAnimationStart(Animator animator) {

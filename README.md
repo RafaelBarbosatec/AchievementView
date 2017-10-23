@@ -46,6 +46,13 @@ achievementView
             //.setBorderRetangle()
             .setColor(R.color.colorAccent)
             .setIcon(R.drawable.ic_sun)
+            //.setScaleTypeIcon(ImageView.ScaleType.CENTER_INSIDE)
+            .setClick(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(MainActivity.this,"Click AchievementView",Toast.LENGTH_SHORT).show();
+                            }
+                        })
             .show();
 
 ```

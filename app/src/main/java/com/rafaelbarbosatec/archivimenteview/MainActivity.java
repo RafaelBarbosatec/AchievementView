@@ -1,9 +1,13 @@
 package com.rafaelbarbosatec.archivimenteview;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.rafaelbarbosatec.archivimentview.AchievementView;
 
@@ -40,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
                         .setMensage("Você ganhou 50 pontos de força!")
                         .setColor(R.color.colorAccent)
                         .setIcon(R.drawable.ic_sun)
+                        .setScaleTypeIcon(ImageView.ScaleType.CENTER_INSIDE)
+                        .setClick(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Toast.makeText(MainActivity.this,"Click AchievementView",Toast.LENGTH_SHORT).show();
+                            }
+                        })
                         .show();
 
                 achievementView

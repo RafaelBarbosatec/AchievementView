@@ -57,7 +57,7 @@ public class AchievementView extends RelativeLayout {
     private void initControl(Context context, AttributeSet attrs) {
         this.context = context;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.content_achievement, this);
+        inflater.inflate(R.layout.content_achievement_t, this);
         assignUiElements();
     }
 

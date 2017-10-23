@@ -2,7 +2,7 @@
 [ ![Release](https://img.shields.io/github/release/RafaelBarbosatec/AchievementView.svg?label=jitpack) ](https://jitpack.io/#RafaelBarbosatec/AchievementView)
 
 <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
-Achievemente View to show mensage for app
+Library Achievemente View to show mensage or informative in your app
 
 Add it to your build.gradle with:
 ```gradle

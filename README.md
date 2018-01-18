@@ -2,7 +2,12 @@
 [ ![Release](https://img.shields.io/github/release/RafaelBarbosatec/AchievementView.svg?label=jitpack) ](https://jitpack.io/#RafaelBarbosatec/AchievementView)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
-<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
+<p align="center">
+  <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
+  <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="300"/>
+</p>
+<!--<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
+<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="350"/>-->
 Library Achievemente View to show mensage or informative in your app
 
 Add it to your build.gradle with:

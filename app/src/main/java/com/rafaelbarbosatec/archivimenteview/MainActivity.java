@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                achievementView
+//                        .setTitle("Treino Finalizado")
+//                        .setMensage("Você ganhou 30 pontos de força!")
+//                        .setBorderRetangle()
+//                        .setColor(R.color.colorPrimaryDark)
+//                        .setIcon(R.drawable.ic_news)
+                        .show();
+
                 achievementView2
                         .setTitle("Treino Finalizado")
                         .setMensage("Você ganhou 50 pontos de força!")
@@ -53,13 +61,6 @@ public class MainActivity extends AppCompatActivity {
                         })
                         .show();
 
-                achievementView
-                        .setTitle("Treino Finalizado")
-                        .setMensage("Você ganhou 30 pontos de força!")
-                        .setBorderRetangle()
-                        .setColor(R.color.colorPrimaryDark)
-                        .setIcon(R.drawable.ic_news)
-                        .show();
 
             }
         });

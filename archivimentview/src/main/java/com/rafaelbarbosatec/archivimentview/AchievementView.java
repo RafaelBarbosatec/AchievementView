@@ -4,6 +4,8 @@ import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.os.CountDownTimer;
@@ -38,6 +40,13 @@ public class AchievementView extends RelativeLayout {
     private boolean constainWidth = false;
     private boolean show = false;
 
+
+    private String tittle = "";
+    private String mensagem = "";
+    private int color = R.color.colorPrimary;
+    private int text_color = Color.WHITE;
+    private int icon = -1;
+
     public AchievementView(Context context) {
         super(context);
     }
@@ -54,6 +63,23 @@ public class AchievementView extends RelativeLayout {
 
     private void initControl(Context context, AttributeSet attrs) {
         this.context = context;
+        TypedArray typedArray = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.archivimentview,
+                0, 0);
+
+        try {
+
+            tittle = typedArray.getString(R.styleable.archivimentview_ac_tittle);
+            mensagem = typedArray.getString(R.styleable.archivimentview_ac_mensage);
+            color = typedArray.getInt(R.styleable.archivimentview_ac_color,color);
+            text_color = typedArray.getInt(R.styleable.archivimentview_ac_text_color,text_color);
+            icon = typedArray.getResourceId(R.styleable.archivimentview_ac_icon,-1);
+
+        }finally {
+            typedArray.recycle();
+        }
+
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.content_ach, this);
         assignUiElements();
@@ -69,9 +95,20 @@ public class AchievementView extends RelativeLayout {
         rl_ach.setAlpha(0f);
         ll_content = (LinearLayout) findViewById(R.id.ll_content);
 
+        tv_titulo.setText(tittle);
+
+        tv_msg.setText(mensagem);
+
+        GradientDrawable bgView = (GradientDrawable)ll_content_main.getBackground();
+        bgView.setColor(color);
+
+        tv_msg.setTextColor(text_color);
+        tv_titulo.setTextColor(text_color);
+
+        if (icon != -1)
+        img_left.setImageDrawable(context.getResources().getDrawable(icon));
+
     }
-
-
 
     private void iniciarConf(){
 
@@ -95,6 +132,8 @@ public class AchievementView extends RelativeLayout {
 
     public AchievementView setColor(int color){
 
+        this.color = color;
+
         GradientDrawable bgView = (GradientDrawable)ll_content_main.getBackground();
         bgView.setColor(context.getResources().getColor(color));
 
@@ -111,6 +150,8 @@ public class AchievementView extends RelativeLayout {
     }
 
     public AchievementView setIcon(int drawable){
+
+        icon = drawable;
 
         img_left.setImageDrawable(context.getResources().getDrawable(drawable));
 
@@ -133,6 +174,8 @@ public class AchievementView extends RelativeLayout {
     }*/
     public AchievementView setTitle(String titulo){
 
+        tittle = titulo;
+
         tv_titulo.setText(titulo);
 
         return this;
@@ -140,12 +183,16 @@ public class AchievementView extends RelativeLayout {
 
     public AchievementView setMensage(String msg){
 
+        mensagem = msg;
+
         tv_msg.setText(msg);
 
         return this;
     }
 
     public AchievementView setTextColor(int color){
+
+        text_color = color;
         tv_titulo.setTextColor(color);
         tv_msg.setTextColor(color);
         return this;

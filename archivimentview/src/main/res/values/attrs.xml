@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="archivimentview">
+        <attr name="ac_tittle" format="string" />
+        <attr name="ac_mensage" format="string" />
+        <attr name="ac_icon" format="reference" />
+        <attr name="ac_color" format="color" />
+        <attr name="ac_text_color" format="color" />
+    </declare-styleable>
+
+</resources>

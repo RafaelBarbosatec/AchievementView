@@ -22,7 +22,7 @@ and:
 
 ```gradle
 dependencies {
-     compile 'com.github.RafaelBarbosatec:AchievementView:0.1.1'
+     compile 'com.github.RafaelBarbosatec:AchievementView:0.1.4'
 }
 
 ```

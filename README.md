@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
-  <!--<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="300"/>-->
+  <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="300"/>
 </p>
 <!--<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
 <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="350"/>-->
@@ -46,7 +46,7 @@ Add in view
 
 ```
 
-Configuration
+Or
 ---
 
 ```java
@@ -68,6 +68,15 @@ achievementView
                         })
             .show();
 
+```
+
+Show Achievement
+---
+
+```java
+
+achievementView = (AchievementView) findViewById(R.id.achievementView);
+achievementView.show();
 ```
 
 License

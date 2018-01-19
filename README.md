@@ -36,8 +36,8 @@ Add in view
         android:id="@+id/achievementView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-	app:ac_tittle="Rafael Almeida"
-        app:ac_mensage="kkkkkkkkkkkkkkk"
+	app:ac_tittle="Parabéns"
+        app:ac_mensage="Acabou de ganhar 50 coins"
         app:ac_icon="@drawable/ic_news"
         app:ac_color="@color/colorPrimaryDark"
         app:ac_text_color="@color/colorAccent">

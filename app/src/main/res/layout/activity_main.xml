@@ -14,7 +14,7 @@
         app:ac_mensage="kkkkkkkkkkkkkkk"
         app:ac_icon="@drawable/ic_news"
         app:ac_color="@color/colorPrimaryDark"
-        app:ac_text_color="@color/colorAccent">
+        app:ac_text_color="@android:color/holo_blue_bright">
 
     </com.rafaelbarbosatec.archivimentview.AchievementView>
 

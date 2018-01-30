@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/rl_ach"
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ach"
     android:layout_width="match_parent"
-    android:animateLayoutChanges="true"
     android:gravity="center"
-    android:padding="10dp"
+    android:padding="@dimen/padding_content_archiev"
     android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/ll_content_main"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/height_achiev"
         android:orientation="horizontal"
         android:background="@drawable/retangle_c_archiement"
         android:gravity="center_vertical">
 
         <ImageView
             android:id="@+id/img_left"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="@dimen/height_achiev"
+            android:layout_height="@dimen/height_achiev"
             android:scaleType="center"/>
 
         <LinearLayout
             android:id="@+id/ll_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingRight="@dimen/padding_ll_right"
+            android:paddingLeft="@dimen/padding_ll_left"
             android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/padding_ll_right"
+            android:paddingStart="@dimen/padding_ll_left">
 
             <TextView
                 android:id="@+id/tv_titulo"
@@ -34,9 +38,8 @@
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
                 android:textStyle="bold"
-                android:paddingLeft="5dp"
-                android:paddingRight="22dp"
-                android:text="gfgdgdfg"/>
+                android:text=""/>
+
             <TextView
                 android:id="@+id/tv_msg"
                 android:layout_width="match_parent"
@@ -44,11 +47,9 @@
                 android:maxWidth="250dp"
                 android:ellipsize="end"
                 android:layout_marginTop="-1dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="22dp"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
-                android:text="gdfgdgdfg"/>
+                android:text=""/>
 
         </LinearLayout>
 

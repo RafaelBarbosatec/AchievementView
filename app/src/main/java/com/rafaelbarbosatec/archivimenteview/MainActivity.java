@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.rafaelbarbosatec.archivimentview.AchievementView;
+import com.rafaelbarbosatec.archivimentview.iterface.ShowListern;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,24 +40,41 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                achievementView
-//                        .setTitle("Treino Finalizado")
-//                        .setMensage("Você ganhou 30 pontos de força!")
-//                        .setBorderRetangle()
-//                        .setColor(R.color.colorPrimaryDark)
-//                        .setIcon(R.drawable.ic_news)
-                        .show();
+                achievementView.show();
 
                 achievementView2
                         .setTitle("Treino Finalizado")
                         .setMensage("Você ganhou 50 pontos de força!")
+                        .setBorderRetangle()
                         .setColor(R.color.colorAccent)
                         .setIcon(R.drawable.ic_sun)
+                        .setDuration(AchievementView.TIMER_INDETERMINATE)
                         .setScaleTypeIcon(ImageView.ScaleType.CENTER_INSIDE)
                         .setClick(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Toast.makeText(MainActivity.this,"Click AchievementView",Toast.LENGTH_SHORT).show();
+                                achievementView2.dimiss();
+                            }
+                        })
+                        .setShowListern(new ShowListern() {
+                            @Override
+                            public void start() {
+                                Log.i("LOG","start");
+                            }
+
+                            @Override
+                            public void show() {
+                                Log.i("LOG","show");
+                            }
+
+                            @Override
+                            public void dimiss() {
+                                Log.i("LOG","dimiss");
+                            }
+
+                            @Override
+                            public void end() {
+                                Log.i("LOG","end");
                             }
                         })
                         .show();

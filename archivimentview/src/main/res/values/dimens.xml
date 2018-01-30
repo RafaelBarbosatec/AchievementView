@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_achiev">48dp</dimen>
+    <dimen name="padding_content_archiev">10dp</dimen>
+    <dimen name="padding_ll_right">22dp</dimen>
+    <dimen name="padding_ll_left">5dp</dimen>
+</resources>

@@ -60,10 +60,34 @@ achievementView
             .setColor(R.color.colorAccent)
             .setIcon(R.drawable.ic_sun)
             //.setScaleTypeIcon(ImageView.ScaleType.CENTER_INSIDE)
+	    .setDuration(AchievementView.TIMER_INDETERMINATE) // or time in milliseconds
             .setClick(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 Toast.makeText(MainActivity.this,"Click AchievementView",Toast.LENGTH_SHORT).show();
+				//if duration TIMER_INDETERMINATE call dimiss() to hide achievement
+				achievementView.dimiss();
+                            }
+                        })
+	    .setShowListern(new ShowListern() {
+                            @Override
+                            public void start() {
+                                Log.i("LOG","start");
+                            }
+
+                            @Override
+                            public void show() {
+                                Log.i("LOG","show");
+                            }
+
+                            @Override
+                            public void dimiss() {
+                                Log.i("LOG","dimiss");
+                            }
+
+                            @Override
+                            public void end() {
+                                Log.i("LOG","end");
                             }
                         })
             .show();

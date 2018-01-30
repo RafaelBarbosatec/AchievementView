@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
-  <!--<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="300"/>-->
+  <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="300"/>
 </p>
 <!--<img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/exemplo.png" width="350"/>
 <img src="https://github.com/RafaelBarbosatec/AchievementView/blob/master/imagem/example.gif" width="350"/>-->
@@ -22,7 +22,7 @@ and:
 
 ```gradle
 dependencies {
-     compile 'com.github.RafaelBarbosatec:AchievementView:0.1.1'
+     compile 'com.github.RafaelBarbosatec:AchievementView:0.1.4'
 }
 
 ```
@@ -36,8 +36,8 @@ Add in view
         android:id="@+id/achievementView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-	app:ac_tittle="Rafael Almeida"
-        app:ac_mensage="kkkkkkkkkkkkkkk"
+	app:ac_tittle="Parabéns"
+        app:ac_mensage="Acabou de ganhar 50 coins"
         app:ac_icon="@drawable/ic_news"
         app:ac_color="@color/colorPrimaryDark"
         app:ac_text_color="@color/colorAccent">
@@ -46,7 +46,7 @@ Add in view
 
 ```
 
-Configuration
+Or
 ---
 
 ```java
@@ -68,6 +68,15 @@ achievementView
                         })
             .show();
 
+```
+
+Show Achievement
+---
+
+```java
+
+achievementView = (AchievementView) findViewById(R.id.achievementView);
+achievementView.show();
 ```
 
 License

@@ -1,4 +1,5 @@
 # AchievementView
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-AchievementView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/6706)
 [ ![Release](https://img.shields.io/github/release/RafaelBarbosatec/AchievementView.svg?label=jitpack) ](https://jitpack.io/#RafaelBarbosatec/AchievementView)
 [![API](https://img.shields.io/badge/API-14%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=14)
 
